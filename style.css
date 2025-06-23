@@ -1,0 +1,142 @@
+/* === CSS Variables for Theme Colors === */
+:root {
+    --bg-color: #f0f0f0;
+    --text-color: #222;
+    --task-bg: #fff;
+    --btn-bg: #28a745;
+    --btn-hover: #218838;
+    --delete-bg: red;
+    --delete-hover: darkred;
+    --font-family: 'Raleway', sans-serif;
+  }
+  
+  /* === General Body Styling === */
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    text-align: center;
+    padding-top: 70px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  /* === Theme Toggle Button === */
+  #themeToggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  #themeToggle:hover {
+    transform: scale(1.2);
+  }
+  
+  /* === Input Field and Dropdown === */
+  input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* === Main Buttons: Add / Clear / Filters === */
+  #addButton, #clearButton, #filters button {
+    padding: 8px 12px;
+    margin: 5px;
+    font-size: 14px;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #addButton:hover {
+    background-color: var(--btn-hover);
+  }
+  
+  #clearButton {
+    background-color: #dc3545;
+  }
+  
+  #clearButton:hover {
+    background-color: #c82333;
+  }
+  
+  /* === Task List Styling === */
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+  }
+  
+  /* === Individual Task Styling === */
+  li {
+    background-color: var(--task-bg);
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin: 8px auto;
+    width: 320px;
+    text-align: left;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  /* === Delete Button Styling === */
+  .delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background: var(--delete-bg);
+    color: white;
+    border: none;
+    padding: 4px 7px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .delete-btn:hover {
+    background: var(--delete-hover);
+  }
+  
+  /* === When a Task is Marked Done === */
+  .done {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0.7;
+  }
+  
+  /* === Priority Colors === */
+  .low {
+    border-left: 6px solid green;
+  }
+  
+  .medium {
+    border-left: 6px solid orange;
+  }
+  
+  .high {
+    border-left: 6px solid red;
+  }
+  
+  /* === Dark Theme Overrides === */
+  body.dark-theme {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --task-bg: #1e1e1e;
+    --btn-bg: #6c63ff;
+    --btn-hover: #5546ff;
+    --delete-bg: #ff4d4d;
+    --delete-hover: #cc0000;
+  }
+  
+  
+  
+  
